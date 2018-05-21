@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Test1</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+
+    <link rel="stylesheet"  data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.13.1/min/vs/editor/editor.main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Monaco Editor Sync Loading Sample</h2>
+    <div id="container" style="width:800px;height:600px;border:1px solid grey"></div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.13.1/min/vs/loader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.13.1/min/vs/editor/editor.main.nls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.13.1/min/vs/editor/editor.main.js"></script>
+<script>
+    var editor = monaco.editor.create(document.getElementById('container'), {
+        value: [
+                'function x() {',
+                '\tconsole.log("Hello world!");',
+                '}'
+                ].join('\n'),
+            language: 'javascript'
+    });
+</script>
+</html>
